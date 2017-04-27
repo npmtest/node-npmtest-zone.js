@@ -1,6 +1,6 @@
 # npmtest-zone.js
 
-#### test coverage for  [zone.js (v0.8.5)](https://github.com/angular/zone.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-zone.js.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-zone.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-zone.js.svg)](https://travis-ci.org/npmtest/node-npmtest-zone.js)
+#### basic test coverage for  [zone.js (v0.8.9)](https://github.com/angular/zone.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-zone.js.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-zone.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-zone.js.svg)](https://travis-ci.org/npmtest/node-npmtest-zone.js)
 
 #### Zones for JavaScript
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-zone.js/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-zone.js/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-zone.js/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-zone.js/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-zone.js/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-zone.js/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-zone.js/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-zone.js/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-zone.js/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-zone.js/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-zone.js/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-zone.js/build/coverage.html/index.html)
 
@@ -52,6 +52,7 @@
         "concurrently": "^2.2.0",
         "conventional-changelog": "^1.1.0",
         "es6-promise": "^3.0.2",
+        "google-closure-compiler": "^20170409.0.0",
         "gulp": "^3.8.11",
         "gulp-clang-format": "^1.0.23",
         "gulp-conventional-changelog": "^1.1.0",
@@ -88,14 +89,14 @@
         "test": "test"
     },
     "dist": {
-        "shasum": "7906e017482cbff4c3f079c5c34305ce941f5ba2",
-        "tarball": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.5.tgz"
+        "shasum": "34aaa9a3ec6d0e4acebd1b761adafa590473638b",
+        "tarball": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.9.tgz"
     },
     "files": [
         "lib",
         "dist"
     ],
-    "gitHead": "e11d9ff6c7b0f0bb27d0efd49f03d74e47ea48c9",
+    "gitHead": "89132fd2f6a4b77bae67fd208d2fb9c96b8f7f62",
     "homepage": "https://github.com/angular/zone.js#readme",
     "license": "MIT",
     "main": "dist/zone-node.js",
@@ -119,6 +120,7 @@
     "scripts": {
         "changelog": "gulp changelog",
         "ci": "npm run lint && npm run format && npm run promisetest && npm run test:single && npm run test-node",
+        "closure:test": "scripts/closure/closure_compiler.sh",
         "format": "gulp format:enforce",
         "karma-jasmine": "karma start karma-build-jasmine.conf.js",
         "karma-jasmine:autoclose": "npm run karma-jasmine:single && npm run ws-client",
@@ -138,7 +140,8 @@
         "ws-server": "node ./test/ws-server.js"
     },
     "typings": "dist/zone.js.d.ts",
-    "version": "0.8.5"
+    "version": "0.8.9",
+    "bin": {}
 }
 ```
 
